@@ -46,8 +46,8 @@ img {
 .images {
     margin: 2rem 0;
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-gap: 2%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 6%;
 }
 
 .fontSize {
@@ -78,7 +78,7 @@ button#addMovieImg {
     font-size: 1.6rem;
 }
 
-@media (max-width: 577.99px) {
+@media (max-width: 673.99px) {
     .page-title {
         font-size: 3.3rem;
     }
@@ -104,18 +104,10 @@ button#addMovieImg {
     }
 }
 
-@media (min-width: 578px) and (max-width: 767.99px) {
+@media (min-width: 674px) and (max-width: 1023.99px) {
     .images {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 2.5%;
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1023.99px) {
-    .images {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-gap: 6%;
     }
 }
