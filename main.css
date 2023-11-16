@@ -11,33 +11,82 @@ html, body {
     margin: 0;
     font-size: 62.5%;
     box-sizing: border-box;
-    overflow-x: hidden;
 }
 
 body {
     font-family: "Roboto Mono", monospace;
-    background: linear-gradient(to bottom, black, rgb(0, 0, 113));
-    background-repeat: no-repeat;
-    display: flex;
-    flex-direction: column;
+    background-color: #A5C1D1;
 }
 
 .container {
     text-align: center;
-    margin-bottom: 2rem;
-    padding: 2%;
-    flex: 1;
-    overflow: auto;
+    padding: 2rem;
+}
+
+header {
+    background-color: #3E5C6C;
+    padding: 1.5rem 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
 }
 
 .page-title {
-    background-image: linear-gradient(to top, rgb(0, 162, 255), white);
+    background-image: linear-gradient(to top, #00B4D8, #E9ECF4);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    color: white;
-    margin: 2rem 0;
+    color: #E9ECF4;
     font-size: 5rem;
+}
+
+#menu {
+    font-size: 2rem;
+    height: 3.4rem;
+    width: 16rem;
+    border-radius: 4px;
+}
+
+.add {
+    display: none;
+}
+
+.add-menu {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2.5rem 2rem;
+    background-color: #457287;
+}
+
+.add-menu input {
+    text-align: center;
+    border: #141A1C solid 0.15rem;
+    outline: none;
+}
+
+#nameFilm {
+    margin: 0 0.8rem;
+}
+
+.add-menu input,
+.add-menu button {
+    height: 2.8rem;
+    border-radius: 6px;
+    width: 25rem;
+}
+
+button {
+    background-color: #78A5BA;
+    color: #E9ECF4;
+    font-weight: 700;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #729bae;
+    color: #fff;
 }
 
 img {
@@ -45,14 +94,13 @@ img {
 }
 
 .images {
-    margin: 2rem 0;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-gap: 6%;
 }
 
 .fontSize {
-    color: white;
+    color: #000;
     font-size: 2rem;
     margin-bottom: 4px;
 }
@@ -86,11 +134,28 @@ button#addMovieImg {
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 2.5%;
     }
+
+    #menu {
+        font-size: 2.4rem;
+        height: 6rem;
+        width: 18rem;
+    }
+
+    .add-menu {
+        padding: 3rem;
+    }
+
+    .add-menu input,
+    .add-menu button {
+        font-size: 1.8rem;
+        height: 4rem;
+        width: 24rem;
+    }
 }
 
 @media (max-width: 767.99px) {
     .page-title {
-        font-size: 3.3rem;
+        font-size: 3rem;
     }
 
     img {
@@ -116,18 +181,38 @@ button#addMovieImg {
         height: 3rem;
         font-size: 1.2rem;
     }
+
+    .add-menu {
+        padding: 1.4rem;
+    }
+
+    .add-menu input,
+    .add-menu button {
+        height: 2.8rem;
+        width: 12rem;
+    }
+
+    #menu {
+        font-size: 1.5rem;
+        height: 3rem;
+        width: 10rem;
+    }
 }
 
-@media (max-width: 399.99px) {
+@media (max-width: 359.98px) {
+    .page-title {
+        font-size: 1.8rem;
+    }
+
     .images {
         display: grid;
         grid-template-columns: 1fr;
     }
 
-.images img {
-    max-width: 15rem;
-    width: 100%;
-}
+    .images img {
+        max-width: 15rem;
+        width: 100%;
+    }
 
 button#addMovieImg {
         position: fixed;
@@ -137,5 +222,23 @@ button#addMovieImg {
         width: 8.0rem;
         height: 3rem;
         font-size: 1.2rem;
+    }
+
+    #menu {
+        margin-left: 0.8rem;
+        font-size: 1.2rem;
+        height: 2.5rem;
+        width: 8.5rem;
+    }
+
+    .add-menu {
+        padding: 1.5rem;
+    }
+
+    .add-menu input,
+    .add-menu button {
+        font-size: 1rem;
+        height: 2rem;
+        width: 8rem;
     }
 }

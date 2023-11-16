@@ -9,17 +9,25 @@
 </head>
 <html>
 <body>
-    <div class="container">
+    <header>
         <h1 class="page-title">
             <i class="bi bi-fire"></i>HeavenFlix
         </h1>
-        <input type="url" id="filme">
-        <button type="button" onclick="addMovieImg.addEventListener">Adicionar Filme/Serie:</button>
+        <button type="button" id="menu">+ Filme/Serie</button>
+    </header>
+    <div class="add">
+        <div class="add-menu">
+            <input type="url" id="filmURL" placeholder="URL do Filme: " name="filmURL">
+            <input type="text" name="nameFilm" placeholder="Nome do Filme: " id="nameFilm">
+            <button type="button" id="film" onclick="addMovie.addEventListener()">Adicionar</button>
+        </div>
+    </div>
+    <div class="container">
         <div class="images">
         </div>
-        
     </div>
     
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
