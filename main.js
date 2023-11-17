@@ -28,9 +28,12 @@ var addMovie = document.getElementById('film');
 
 addMovie.addEventListener('click', function () {
     const url = document.getElementById('filmURL').value;
-    if (url) {
-        const images = document.querySelector('.images')
 
+    let extensions = [".jpg", ".jpeg", ".gif", ".png", ".webp", ".heif", ".tiff", ".bmp", ".psd", ".pdf", ".heic", ".raw", ".eps", ".ai", ".indd", ".svg", ".dwg"];
+
+    if (extensions.some(extension => filmURL.value.toLowerCase().endsWith(extension))) {
+        const images = document.querySelector('.images')
+    
         const content = document.createElement('div');
         images.appendChild(content);
 
@@ -43,6 +46,12 @@ addMovie.addEventListener('click', function () {
         title.classList.add('fontSize');
         content.appendChild(title);
 
+        filmURL.value = '';
+        nameFilm.value = '';
+    } else if (url === "") {
+        alert('Campo em branco.\nAdicione o filme, por favor.')
+    } else {
+        alert('Oops! Parece que algo deu errado.\nPor favor, escolha uma imagem válida para o seu filme. 🍿');
         filmURL.value = '';
         nameFilm.value = '';
     }

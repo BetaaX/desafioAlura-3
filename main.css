@@ -15,16 +15,16 @@ html, body {
 
 body {
     font-family: "Roboto Mono", monospace;
-    background-color: #A5C1D1;
+    background-color: #CAD2C5;
 }
 
 .container {
     text-align: center;
-    padding: 2rem;
+    padding: 4rem 2rem;
 }
 
 header {
-    background-color: #3E5C6C;
+    background-color: #32474C;
     padding: 1.5rem 3rem;
     display: flex;
     align-items: center;
@@ -32,7 +32,7 @@ header {
 }
 
 .page-title {
-    background-image: linear-gradient(to top, #00B4D8, #E9ECF4);
+    background-image: linear-gradient(to top, #5EE87E, #C7F9CC);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -56,11 +56,13 @@ header {
     align-items: center;
     justify-content: center;
     padding: 2.5rem 2rem;
-    background-color: #457287;
+    background-color: #6B917E;
 }
 
 .add-menu input {
     text-align: center;
+    background-color: #e3ebde;
+    color: #000;
     border: #141A1C solid 0.15rem;
     outline: none;
 }
@@ -77,16 +79,16 @@ header {
 }
 
 button {
-    background-color: #78A5BA;
-    color: #E9ECF4;
+    background-color: #446461;
+    color: #e3ebde;
     font-weight: 700;
     border: none;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #729bae;
-    color: #fff;
+    background-color: #4B6F68;
+    color: #e3ebde;
 }
 
 img {
